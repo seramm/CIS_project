@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 
+
 class MainWindow(tk.Tk):
     def __init(self):
         super().__init__()
@@ -10,7 +11,7 @@ class MainWindow(tk.Tk):
         self.notebook = ttk.Notebook(self)
         self.notebook.pack(fill="both", expand=True, padx=10, pady=10)
 
-        self.init_panels()    
-        
+        self.init_panels()
+
     def init_panels(self):
         pass
