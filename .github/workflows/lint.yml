@@ -1,0 +1,29 @@
+on: push
+name: Python linting
+
+permissions:
+  contents: read
+
+jobs:
+  PythonLinting:
+    name: Black and Ruff run
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+
+      - name: Black check
+        uses: psf/black@stable
+        with:
+          options: "--check --verbose"
+          src: "."
+
+      - name: Ruff check
+        uses: astral-sh/ruff-action@v3
+        with:
+          args: "check"
