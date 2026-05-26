@@ -1,6 +1,8 @@
 import tkinter as tk
 from tkinter import ttk
 
+from gui.panel_hash import PanelHashing
+
 
 class MainWindow(tk.Tk):
     def __init__(self):
@@ -14,4 +16,5 @@ class MainWindow(tk.Tk):
         self.init_panels()
 
     def init_panels(self):
-        pass
+        self.tab_hasing = PanelHashing(self.notebook)
+        self.notebook.add(self.tab_hasing, text="Hashing")
