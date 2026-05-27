@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 
 from gui.panel_hash import PanelHashing
+from gui.panel_crypt import PanelCryptography
 
 
 class MainWindow(tk.Tk):
@@ -18,3 +19,6 @@ class MainWindow(tk.Tk):
     def init_panels(self):
         self.tab_hasing = PanelHashing(self.notebook)
         self.notebook.add(self.tab_hasing, text="Hashing")
+
+        self.tab_crypto = PanelCryptography(self.notebook)
+        self.notebook.add(self.tab_crypto, text="Cryptography")
