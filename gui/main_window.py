@@ -3,6 +3,7 @@ from tkinter import ttk
 
 from gui.panel_hash import PanelHashing
 from gui.panel_crypt import PanelCryptography
+from gui.panel_sign import PanelSigning
 
 
 class MainWindow(tk.Tk):
@@ -22,3 +23,6 @@ class MainWindow(tk.Tk):
 
         self.tab_crypto = PanelCryptography(self.notebook)
         self.notebook.add(self.tab_crypto, text="Cryptography")
+
+        self.tab_signing = PanelSigning(self.notebook)
+        self.notebook.add(self.tab_signing, text="Digital Signature")
