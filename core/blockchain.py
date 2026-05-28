@@ -1,7 +1,7 @@
 import secrets
 import time
 from typing import List
-from hashing import gen_sha256
+from core.hashing import gen_sha256
 
 
 class Block:
@@ -26,6 +26,7 @@ class Block:
 class Blockchain:
     def __init__(self):
         self.chain: List[Block] = []
+        self.create_init_block()
 
     def create_init_block(self):
         init_block = Block(0, "First(genesis) block", "0")
