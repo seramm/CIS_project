@@ -6,7 +6,7 @@
 Objective
 ---------
 
-= Create a simple application that demonstrates basic concepts of cryptography and blockchain
+Create a simple application that demonstrates basic concepts of cryptography and blockchain
 
 
 Install dependencies
