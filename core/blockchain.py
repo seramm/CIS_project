@@ -22,6 +22,9 @@ class Block:
 
         return gen_sha256(content)
 
+    def refresh_hash(self):
+        self.hash = self.calc_hash()
+
 
 class Blockchain:
     def __init__(self):
@@ -50,3 +53,11 @@ class Blockchain:
             ):
                 return False
         return True
+
+    def recalculate_hashes(self):
+        for block in self.chain:
+            block.refresh_hash()
+
+    def add_block_raw(self, block: Block):
+        block.previous_hash = self.chain[-1].hash
+        self.chain.append(block)
