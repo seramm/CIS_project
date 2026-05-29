@@ -12,9 +12,12 @@ Objective
 Install dependencies
 --------------------
 
+For `python3-pip` requirements use the following command:
 ```bash
 $ pip install -r requirements.txt
 ```
+
+Besides those packages is needed to install `Tkinter` for the GUI
 
 
 Running application
